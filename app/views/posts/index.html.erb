@@ -1,0 +1,11 @@
+<h1>Articles</h1>
+
+<% if @posts.any? %>
+    <%= @posts.each do |post| %>
+        <article>
+          <h1><%= post.title %></h1>
+        </article>
+    <% end %>
+<% else %>
+    <p>No posts yet</p>
+<% end %>

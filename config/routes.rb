@@ -1,4 +1,19 @@
 Rails.application.routes.draw do
+  # the first 7 routes are the common routes that must always be there
+  # get '/posts' => 'posts#index'
+  # get 'posts/:id' => 'posts#show'
+  # get 'posts/new' => 'posts#new'
+  # post '/posts' => 'posts#create'
+  # get '/posts/:id/edit' => 'posts#edit'
+  # patch '/posts:id' => 'posts#update'
+  # put '/posts:id' => 'posts#update'
+  # delete '/posts:id' => 'posts#destroy'
+
+  # by doing resources :posts I'll get everything I just did above!!!
+  resources :posts
+
+  root "welcom#index"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
